@@ -1,0 +1,123 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1b2430;
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 998;
+}
+
+.logo > h1{
+    font-size: 42px;
+    font-weight: 800;
+    color: white;
+}
+span{
+    font-size: 32px;
+    font-weight: 900;
+    color: beige;
+
+}
+
+.nav-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.nav-items > a{
+    text-decoration: none;
+    list-style: none;
+    padding: 0 15px;
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+.nav-items>a:hover,
+.nav-items>a.active{
+    color: aqua;
+}
+
+.nav-items>a:hover::after,
+.nav-items>a.active::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: aqua;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.home.active:hover{
+    color: aqua;
+}
+
+.mobile{
+    color: azure;
+
+}
+
+.mobile > i{
+    color: azure;
+    font-size: 30px;
+    line-height: 80px;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .nav-items{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items:flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 130px;
+        right: 2px;
+        width: 300px;
+        height: 80vh;
+        background: #202832;
+        box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.1);
+        opacity: 0.5;
+        padding: 40px 0 0 10px;
+        border-radius: 1rem;
+        transform-origin: 0.3s ease-in-out;
+        text-decoration: none;
+    }
+    
+    .hide-nav{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items:flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 130px;
+        right: -300px;
+        width: 300px;
+        height: 80vh;
+        background: #202832;
+        box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.1);
+        opacity: 0.5;
+        padding: 40px 0 0 10px;
+        border-radius: 1rem;
+        text-decoration: none;
+    }
+    .mobile > i{
+        display: block;
+        font-size: 32px;
+        cursor: pointer;
+       
+    }
+
+}
